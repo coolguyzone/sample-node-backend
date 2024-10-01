@@ -6,11 +6,20 @@ router.get('/', (req, res) => {
 });
 
 router.get('/kitten-mittens', (req, res) => {
-    res.send('this is the kitten mittens route');
+    console.log({data: 'kitten mittens route hit!'});
+    res.send({data: 'kitten mittens route hit!'});
 });
 
 router.get('/doggles', (req, res) => {
-    res.send('this is the doggles route');
+    res.send({data: 'this is the doggles route'});
+});
+
+router.get('/clown-shoes', (req, res) => {
+    res.send({data: 'this is the clown shoes route'});
+});
+
+router.get('/nonfat-water', (req, res) => {
+    res.send({data: 'this is the nonfat water route'});
 });
 
 module.exports = router;

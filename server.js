@@ -1,11 +1,17 @@
 const express = require('express');
 const productsRoute = require('./routes/products');
+const cors = require('cors')
+
 
 const app = express();
+
+app.use(cors());
+
 
 app.get('/', (req, res) => {
     res.send('<h1>Hello, Express.js Server here!</h1>');
 });
+
 
 app.use('/products', productsRoute);
 
@@ -15,7 +21,7 @@ app.use('/products', productsRoute);
 //     res.end();
 // });
 
-const port = 3000;
+const port = 3001;
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
