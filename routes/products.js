@@ -6,16 +6,32 @@ router.get('/', (req, res) => {
 });
 
 router.get('/kitten-mittens', (req, res) => {
-    console.log({data: 'kitten mittens route hit!'});
-    res.send({data: 'kitten mittens route hit!'});
+    console.log({
+        title: 'Kitten Mittens',
+        description: "These mittens are a great way to quiet your cat's loud, heavy footsteps.",
+        imgPath: 'img/kitten-mittens.png'
+    });
+    res.send({
+        title: 'Kitten Mittens',
+        description: "These mittens are a great way to quiet your cat's loud, heavy footsteps.",
+        imgPath: 'img/kitten-mittens.png'
+    });
 });
 
 router.get('/doggles', (req, res) => {
-    res.send({data: 'this is the doggles route'});
+    res.send({
+        title: 'Doggles',
+        description: "If your dog has seasonal allergies or refuses to ride his or her motorcycle, we've got you covered. Comes in small, medium, and Marmaduke.",
+        imgPath: 'img/doggles.png'
+    });
 });
 
 router.get('/clown-shoes', (req, res) => {
-    res.send({data: 'this is the clown shoes route'});
+    res.send({
+        title: 'Clown Shoes',
+        description: "Dozens of styles to choose from, but only one size (men's 29).",
+        imgPath: 'img/clown-shoes.png'
+    });
 });
 
 router.get('/nonfat-water', (req, res) => {
