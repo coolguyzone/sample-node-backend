@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 
 app.get("/products/debug-sentry", (req, res) => {
-    console.log('error?');
+    console.log('Sentry Error thrown!');
     throw new Error("My first Sentry error!");
   });
 
