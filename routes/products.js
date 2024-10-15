@@ -35,7 +35,11 @@ router.get('/clown-shoes', (req, res) => {
 });
 
 router.get('/nonfat-water', (req, res) => {
-    res.send({data: 'this is the nonfat water route'});
+    res.send({
+        title: 'Nonfat Water',
+        description: "Just like Mom used to make, but without the fat. Now with less arsenic!",
+        imgPath: 'img/nonfat-water.png'
+    });
 });
 
 module.exports = router;
